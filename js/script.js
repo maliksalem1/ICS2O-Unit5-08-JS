@@ -16,6 +16,22 @@ if (navigator.serviceWorker) {
 /**
  * This function displays an alert.
  */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function calculate() {
+  // input
+  var firstInteger = document.getElementById("first-integer").value
+  var secondInteger = document.getElementById("second-integer").value
+
+  // process and output
+  let counter = 0
+  var answer = 0
+  var firstIntegerAsInt = parseInt(firstInteger)
+  var secondIntegerAsInt = parseInt(secondInteger)
+  
+  while (counter < secondIntegerAsInt) {
+    console.log("Once through loop:" + counter)
+    answer = firstIntegerAsInt - secondIntegerAsInt
+    counter++
+  }
+
+  document.getElementById("answer").innerHTML = (firstInteger) + " ÷ " + (secondInteger) + " = " + (answer)
 }
