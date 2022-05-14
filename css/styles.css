@@ -19,3 +19,10 @@ p {
   font-size: 1.5rem;
   padding-top: 5pt;
 }
+
+#answer {
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  padding-top: 5pt;
+}
