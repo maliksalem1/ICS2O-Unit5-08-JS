@@ -34,14 +34,13 @@ function calculate() {
       numberCountingDown = numberCountingDown - secondIntegerAsInt
       answer++
     }
-  } else if ((firstIntegerAsInt < 0) || (secondIntegerAsInt < 0)) {
+  } else if ((firstIntegerAsInt < 0) && (secondIntegerAsInt < 0)) {
     numberCountingDown = Math.abs(numberCountingDown)
     secondIntegerAsInt = Math.abs(secondIntegerAsInt)
     while (numberCountingDown >= secondIntegerAsInt) {
       numberCountingDown = numberCountingDown - secondIntegerAsInt
       answer++
     }
-    answer = -Math.abs(answer)
   } else {
     numberCountingDown = Math.abs(numberCountingDown)
     secondIntegerAsInt = Math.abs(secondIntegerAsInt)
@@ -49,6 +48,7 @@ function calculate() {
       numberCountingDown = numberCountingDown - secondIntegerAsInt
       answer++
     }
+    answer = -Math.abs(answer)
   }
 
   // output
