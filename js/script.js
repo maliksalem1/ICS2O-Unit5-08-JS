@@ -22,16 +22,23 @@ function calculate() {
   var secondInteger = document.getElementById("second-integer").value
 
   // process and output
-  let counter = 0
   var answer = 0
+  var remainder = 0
   var firstIntegerAsInt = parseInt(firstInteger)
   var secondIntegerAsInt = parseInt(secondInteger)
-  
-  while (counter < secondIntegerAsInt) {
-    console.log("Once through loop:" + counter)
-    answer = firstIntegerAsInt - secondIntegerAsInt
-    counter++
-  }
+  var numberCountingDown = firstIntegerAsInt
 
-  document.getElementById("answer").innerHTML = (firstInteger) + " ÷ " + (secondInteger) + " = " + (answer)
+  if (firstIntegerAsInt < 0)
+    while (numberCountingDown <= secondIntegerAsInt) {
+      console.log("Once through loop:" + answer)
+      numberCountingDown = numberCountingDown + secondIntegerAsInt
+      answer++
+    } else {
+      while (numberCountingDown >= secondIntegerAsInt) {
+      numberCountingDown = numberCountingDown - secondIntegerAsInt
+      answer++
+      }
+    }
+
+  document.getElementById("answer").innerHTML = firstInteger + " ÷ " + secondInteger + " = " + answer + " R " + numberCountingDown
 }
