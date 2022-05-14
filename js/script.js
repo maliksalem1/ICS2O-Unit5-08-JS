@@ -21,24 +21,36 @@ function calculate() {
   var firstInteger = document.getElementById("first-integer").value
   var secondInteger = document.getElementById("second-integer").value
 
-  // process and output
+  // process
   var answer = 0
   var remainder = 0
   var firstIntegerAsInt = parseInt(firstInteger)
   var secondIntegerAsInt = parseInt(secondInteger)
   var numberCountingDown = firstIntegerAsInt
 
-  if (firstIntegerAsInt < 0)
-    while (numberCountingDown <= secondIntegerAsInt) {
-      console.log("Once through loop:" + answer)
-      numberCountingDown = numberCountingDown + secondIntegerAsInt
-      answer++
-    } else {
-      while (numberCountingDown >= secondIntegerAsInt) {
+
+  if ((firstIntegerAsInt > 0) && (secondIntegerAsInt > 0)) {
+    while (numberCountingDown >= secondIntegerAsInt) {
       numberCountingDown = numberCountingDown - secondIntegerAsInt
       answer++
-      }
     }
+  } else if ((firstIntegerAsInt < 0) || (secondIntegerAsInt < 0)) {
+    numberCountingDown = Math.abs(numberCountingDown)
+    secondIntegerAsInt = Math.abs(secondIntegerAsInt)
+    while (numberCountingDown >= secondIntegerAsInt) {
+      numberCountingDown = numberCountingDown - secondIntegerAsInt
+      answer++
+    }
+  } else {
+    numberCountingDown = Math.abs(numberCountingDown)
+    secondIntegerAsInt = Math.abs(secondIntegerAsInt)
+    while (numberCountingDown >= secondIntegerAsInt) {
+      numberCountingDown = numberCountingDown - secondIntegerAsInt
+      answer++
+    }
+    answer = -Math.abs(answer)
+  }
 
+  // output
   document.getElementById("answer").innerHTML = firstInteger + " ÷ " + secondInteger + " = " + answer + " R " + numberCountingDown
 }
