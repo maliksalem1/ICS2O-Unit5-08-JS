@@ -41,6 +41,7 @@ function calculate() {
       numberCountingDown = numberCountingDown - secondIntegerAsInt
       answer++
     }
+    answer = -Math.abs(answer)
   } else {
     numberCountingDown = Math.abs(numberCountingDown)
     secondIntegerAsInt = Math.abs(secondIntegerAsInt)
@@ -48,7 +49,6 @@ function calculate() {
       numberCountingDown = numberCountingDown - secondIntegerAsInt
       answer++
     }
-    answer = -Math.abs(answer)
   }
 
   // output
