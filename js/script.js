@@ -23,7 +23,6 @@ function calculate() {
 
   // process
   var answer = 0
-  var remainder = 0
   var firstIntegerAsInt = parseInt(firstInteger)
   var secondIntegerAsInt = parseInt(secondInteger)
   var numberCountingDown = firstIntegerAsInt
