@@ -4,4 +4,4 @@
 
 [![Run on Repl.it](https://repl.it/badge/github/Kenny-Le-281/ICS2O-Unit5-08-JS)](https://repl.it/github/Kenny-Le-281/ICS2O-Unit5-08-JS)
 
-This site can be found at: [https://Kenny-Le-281.github.io/ICS2O-Unit5-08-JS/](https://Kenny-Le-281.github.io/ICS2O-Unit5-08-JS/)
+This site can be found at: [https:/maliksalem1.github.io/ICS2O-Unit5-08-JS/](https://maliksalem1.github.io/ICS2O-Unit5-08-JS/)
